@@ -7,7 +7,7 @@ Bu proje, bir kurumun binalarındaki temizlik süreçlerinin, katların, tuvalet
 Kullanılan Teknolojiler;
 * Framework : .NET 9 /ASP.NET CORE Web API
 * ORM: Entity Framework Core(Code First)
-* Veritabanı : MySQL
+* Veri tabanı : MySQL
 * Dökümantasyon ve Test : Swagger / OpenAPI
 * Kütüphaneler: QRCoder (QR Kod üretimi için)
 
@@ -56,7 +56,8 @@ QR Kod (QRCodes) İşlemleri
 * `GET /api/QRCodes/Restroom/{restroomId}` -> Tuvalete Ait QR Kod Detayını Sorgular.
 * `DELETE /api/QRCodes/{id}` -> QR Kod Kaydını ve Sistemdeki İlişkisini Siler.
 
-#NOT: Projenin çalışabilmesi için appsettings.json dosyasında username ve password olarak belirtilen yerlere kendi MySQL kullanıcı adı ve şifrenizi yazmalısınız.
+# NOT1: Projenin çalışabilmesi için appsettings.json dosyasında username ve password olarak belirtilen yerlere kendi MySQL kullanıcı adı ve şifrenizi yazmalısınız.
+# NOT2: Proje kod ekranı açıldığında veri tabanı tablolarını otomatik olarak oluşturabilmek için "paket yöneticisi konsolundaki" varsayılan proje seçimi 'DataAccess' olarak ayarlanarak "Update-Database" komutu çalıştırılmalıdır.
 
 [English]
 
@@ -114,6 +115,7 @@ QR Code Operations
 * `GET /api/QRCodes/Restroom/{restroomId}` -> Gets The QR Code Details By Restroom ID
 * `DELETE /api/QRCodes/{id}` -> Deletes The QR Code From The System.
 
-#NOTE: You need to write your own MySQL username and password to the spesified locations in appsetting.json for this project to run.
+# NOTE1: You need to write your own MySQL username and password to the specified locations in appsettings.json for this project to run.
+# NOTE2: To create the database tables automatically first thing to do is open the "package manager console" after that set the default project as 'DataAccess' and run the "Update-Database" command.
 
 
